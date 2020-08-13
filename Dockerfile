@@ -21,7 +21,7 @@ ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 LABEL "maintainer"="cloudsquad@fxinnovation.com" \
       "org.label-schema.name"="aws-nuke" \
       "org.label-schema.base-image.name"="docker.io/library/alpine" \
-      "org.label-schema.base-image.version"="3.11" \
+      "org.label-schema.base-image.version"="3.12" \
       "org.label-schema.description"="aws-nuke in a container" \
       "org.label-schema.url"="https://github.com/rebuy-de/aws-nuke" \
       "org.label-schema.vcs-url"="https://scm.dazzlingwrench.fxinnovation.com/fxinnovation-private/docker-aws-nuke" \
