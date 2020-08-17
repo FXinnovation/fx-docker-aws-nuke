@@ -1,19 +1,16 @@
 #!/usr/bin/env sh
 
-if [ ! -z "$CREATE_DEFAULT_VPC" ]
+aws-nuke $@
+
+if [ ! -z "$RECREATE_DEFAULT_VPC_RESOURCES" ]
 then
-  echo "CREATE_DEFAULT_VPC is set. This will create the default VPC after runnig aws-nuke."
+  echo "RECREATE_DEFAULT_VPC_RESOURCES is set. This will create the default VPC, subnets, internet gateway, DHCP options and security groups after runnig aws-nuke."
   
-  aws-nuke $@
+  is_dry_run=`echo "$@" |grep '\-\-no\-dry\-run'`
   
-  isdryrun=`echo "$@" |grep '\-\-no\-dry\-run'`
-  
-  if [ ! -z "$isdryrun" ]
+  if [ ! -z "$is_dry_run" ]
   then
     create_aws_default_resources
   else
-    echo "Skiping default VPC recreation in dry mode"
+    echo "Skiping default VPC, subnets, internet gateway, DHCP options and security groups recreation in dry mode"
   fi
-else
-  aws-nuke $@
-fi
