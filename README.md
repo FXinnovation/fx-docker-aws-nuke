@@ -17,7 +17,7 @@ If `RECREATE_DEFAULT_VPC_RESOURCES` environment variable is set, this will recre
 `docker run -it --rm -v ${pwd}/config.yaml:/data/config.yaml -e AWS_ACCESS_KEY_ID=<access_key> -e AWS_SECRET_ACCESS_KEY=<secret_key> -e RECREATE_DEFAULT_VPC_RESOURCES=true -e AWS_DEFAULT_REGION=ca-central-1 fxinnovation/aws-nuke -c /data/config.yaml --force --no-dry-run`
 
 
-NOTE: 
+## Note
 You can use both aws profile or aws environment variable to pass credentials 
 
 `docker run -it --rm -v ${pwd}/config.yaml:/data/config.yaml -v /home/user/.aws/credentials:/root/.aws/credentials -e RECREATE_DEFAULT_VPC_RESOURCES=true fxinnovation/aws-nuke -c /data/config.yaml --force --no-dry-run`
