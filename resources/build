@@ -13,10 +13,10 @@ apk add --no-cache curl \
 # Installation
 ###
 
-curl -sSLo /usr/local/bin/aws-nuke \
-    https://github.com/rebuy-de/aws-nuke/releases/download/${AWS_NUKE_VERSION}/aws-nuke-${AWS_NUKE_VERSION}-linux-amd64
-
-chmod +x /usr/local/bin/aws-nuke
+curl -sSLo /tmp/aws-nuke.tar.gz \
+    https://github.com/rebuy-de/aws-nuke/releases/download/${AWS_NUKE_VERSION}/aws-nuke-${AWS_NUKE_VERSION/-rc/.rc}-linux-amd64.tar.gz
+tar zxf /tmp/aws-nuke.tar.gz -C /tmp/
+install -m 775 /tmp/aws-nuke-v2.15.0.rc.4-linux-amd64 /usr/local/bin/aws-nuke
 
 ###
 # Create default AWS resources python script
