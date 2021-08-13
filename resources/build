@@ -13,9 +13,10 @@ apk add --no-cache curl \
 # Installation
 ###
 
-curl -sSLo /usr/local/bin/aws-nuke \
-    https://github.com/rebuy-de/aws-nuke/releases/download/${AWS_NUKE_VERSION}/aws-nuke-${AWS_NUKE_VERSION}-linux-amd64
-
+curl -sSLo /tmp/aws-nuke-${AWS_NUKE_VERSION}-linux-amd64.tar.gz \
+    https://github.com/rebuy-de/aws-nuke/releases/download/${AWS_NUKE_VERSION}/aws-nuke-${AWS_NUKE_VERSION}-linux-amd64.tar.gz
+tar --directory /tmp -xzf /tmp/aws-nuke-${AWS_NUKE_VERSION}-linux-amd64.tar.gz aws-nuke-${AWS_NUKE_VERSION}-linux-amd64
+mv /tmp/aws-nuke-${AWS_NUKE_VERSION}-linux-amd64 /usr/local/bin/aws-nuke
 chmod +x /usr/local/bin/aws-nuke
 
 ###
