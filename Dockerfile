@@ -1,4 +1,4 @@
-FROM alpine:3.12
+FROM alpine:3.14.1
 
 ENV AWS_NUKE_VERSION="v2.14.0" \
     PYTHON3_VERSION="3.8.5-r0" \
@@ -21,7 +21,7 @@ ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 LABEL "maintainer"="cloudsquad@fxinnovation.com" \
       "org.label-schema.name"="aws-nuke" \
       "org.label-schema.base-image.name"="docker.io/library/alpine" \
-      "org.label-schema.base-image.version"="3.12" \
+      "org.label-schema.base-image.version"="3.14.1" \
       "org.label-schema.description"="aws-nuke in a container" \
       "org.label-schema.url"="https://github.com/rebuy-de/aws-nuke" \
       "org.label-schema.vcs-url"="https://scm.dazzlingwrench.fxinnovation.com/fxinnovation-private/docker-aws-nuke" \
