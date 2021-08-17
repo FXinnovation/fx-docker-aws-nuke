@@ -8,7 +8,7 @@ We push a `latest` tag on this repository, to run an older version please checko
 We do not follow the aws-nuke release tags in the docker image tags. You can always find the cloud-nuke version in the Dockerfile that was used to create the image or you can use the labels.
 
 ## Usage
-For aws-nuke help, you can run this command 
+For aws-nuke help, you can run this command
 
 `docker run --rm -v $(pwd):/data fxinnovation/aws-nuke --help`
 
@@ -18,7 +18,7 @@ If `RECREATE_DEFAULT_VPC_RESOURCES` environment variable is set, this will recre
 
 
 ## Note
-You can use both aws profile or aws environment variable to pass credentials 
+You can use both aws profile or aws environment variable to pass credentials
 
 `docker run -it --rm -v ${pwd}/config.yaml:/data/config.yaml -v /home/user/.aws/credentials:/root/.aws/credentials -e RECREATE_DEFAULT_VPC_RESOURCES=true fxinnovation/aws-nuke -c /data/config.yaml --force --no-dry-run`
 
